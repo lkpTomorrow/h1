@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    <ul>
+        <li id="slg">国共联合司令官</li>
+    </ul>
+
+    <!-- 独立团 -->
+    <ul id="dlt">
+        <li class="tz">独立团团长-李云龙</li>
+        <li>狙击手</li>
+        <li>士兵</li>
+        <li>士兵</li>
+        <li>士兵</li>
+        <li class="hf">伙夫</li>
+        <li class="wsy">卫生员</li>
+
+    </ul>
+
+    <!-- 358团 -->
+    <ul id="t358">
+        <li class="tz">358团团长-楚云飞</li>
+        <li>狙击手</li>
+        <li class="nj">士兵</li>
+        <li>士兵</li>
+        <li>士兵</li>
+        <li class="hf">伙夫</li>
+        <li class="wsy">卫生员</li>
+    </ul>
+</div>
+<div>
+    <p class="nj">老百姓</p>
+    <p class="nj">老百姓</p>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function(){
+        $("#slg").css("fontSize","30px");
+        $(".tz").css("fontSize","24px");
+        $("li").css("background","red");
+        $(".wsy,.hf").css("background","white");
+        $("li.nj").css("background","yellow");
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            background: #000;
+        }
+
+        .wrap {
+            margin: 100px auto 0;
+            width: 630px;
+            height: 394px;
+            padding: 10px 0 0 10px;
+            background: #000;
+            overflow: hidden;
+            border: 1px solid #fff;
+        }
+
+        .wrap li {
+            float: left;
+            margin: 0 10px 10px 0;
+
+        }
+
+        .wrap img {
+            display: block;
+            border: 0;
+        }
+    </style>
+   <!-- <script src="../jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            //1.获取li 给li注册鼠标进入事件
+            //mouseenter
+            $(".wrap>ul>li").mouseenter(function () {
+                //2.把当前的li的opacity设置为1  其他的设置为0.4
+                $(this).css("opacity","1")
+                        .siblings()
+                        .css("opacity","0.4");
+                console.log("鼠标进入事件被执行了");
+            });
+
+            //2.给div注册鼠标离开事件
+            //mouseleave
+            $(".wrap").mouseleave(function () {
+                //3.把所有的li的opacity设置为1
+                $(this).find("li").css("opacity",1);
+                console.log("鼠标离开事件被执行了");
+
+            });
+
+
+            //mouseenter和mouseleave不会有事件冒泡
+            //mouseover和mouseout会有事件冒泡
+        });
+    </script>-->
+</head>
+<body>
+<div class="wrap">
+    <ul>
+        <li><a href="#"><img src="images/01.jpg" alt=""/></a></li>
+        <li><a href="#"><img src="images/02.jpg" alt=""/></a></li>
+        <li><a href="#"><img src="images/03.jpg" alt=""/></a></li>
+        <li><a href="#"><img src="images/04.jpg" alt=""/></a></li>
+        <li><a href="#"><img src="images/05.jpg" alt=""/></a></li>
+        <li><a href="#"><img src="images/06.jpg" alt=""/></a></li>
+    </ul>
+</div>
+<script src="../../jquery-1.12.4.js"></script>
+<script>
+        $(function(){
+            $(".wrap>ul>li").mouseenter(function(){
+                $(this).css("opacity",1);
+                $(this).siblings().css("opacity",0.4);
+            })
+            $(".wrap").mouseleave(function(){
+                $(this).find("li").css("opacity",1);
+            })
+        })
+</script>
+</body>
+</html>

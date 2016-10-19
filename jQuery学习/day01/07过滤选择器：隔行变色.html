@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<ul>
+    <li>我是第1个li的内容</li>
+    <li>我是第2个li的内容</li>
+    <li>我是第3个li的内容</li>
+    <li>我是第4个li的内容</li>
+    <li>我是第5个li的内容</li>
+    <li>我是第6个li的内容</li>
+    <li>我是第7个li的内容</li>
+    <li>我是第8个li的内容</li>
+    <li>我是第9个li的内容</li>
+    <li>我是第10个li的内容</li>
+</ul>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function(){
+        $("li:odd").css("background","pink");
+        $("li:even").css("background","lightgray");
+        $("li:eq(2)").css("fontSize","30px  ");
+    })
+</script>
+</body>
+</html>

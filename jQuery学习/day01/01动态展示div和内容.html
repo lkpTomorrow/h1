@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            display: none;
+            width: 300px;
+            height: 100px;
+            background: pink;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+    <button id="btn1">展示div</button>
+    <button id="btn2">显示内容</button>
+    <script>
+        window.onload=function(){
+            var btn1=document.getElementById("btn1");
+            var dvs=document.getElementsByTagName("div");
+
+            btn1.onclick=function(){
+                for(var i=0;i<dvs.length;i++){
+                    dvs[i].style.display="block";
+                }
+            }
+            var btn2=document.getElementById("btn2");
+            btn2.onclick=function(){
+                for(var i=0;i<dvs.length;i++){
+                    dvs[i].innerHTML="这是div里的内容";
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
